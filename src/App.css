@@ -1,0 +1,173 @@
+/* THE BETU ARCHIVES — Y2K VISUAL SYSTEM */
+:root {
+  --pink: #ff78b2;
+  --deep: #c83e82;
+  --pale: #fff3f8;
+  --blush: #ffe1ee;
+  --purple: #b79ad9;
+  --ink: #48283e;
+  --line: #df85ad;
+}
+
+.website { min-height: 100vh; overflow: hidden; position: relative; }
+.top-bar {
+  height: 58px; padding: 0 7%; display: flex; align-items: center; justify-content: space-between;
+  color: white; background: var(--deep); border-bottom: 4px solid #9e2d65;
+}
+.logo { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font: 10px "Press Start 2P", monospace; }
+.system-status { font: 21px "VT323", monospace; }
+.online-dot { display: inline-block; width: 9px; height: 9px; margin-right: 7px; border-radius: 50%; background: #9bffad; box-shadow: 0 0 8px #9bffad; }
+.sound-button, .close-button { display: grid; place-items: center; border: 0; background: transparent; color: inherit; }
+.sound-button { color: white; }
+
+.floating-decoration { position: fixed; z-index: 0; pointer-events: none; color: #e982b2; opacity: .7; animation: floaty 4s ease-in-out infinite; }
+.heart-one { top: 22%; left: 3%; font-size: 35px; }
+.heart-two { top: 66%; right: 4%; font-size: 45px; }
+.star-one { top: 43%; right: 3%; font-size: 35px; }
+.star-two { top: 80%; left: 4%; font-size: 30px; }
+@keyframes floaty { 50% { transform: translateY(-14px) rotate(10deg); } }
+
+.hero { min-height: 720px; padding: 58px 18px 25px; display: flex; flex-direction: column; align-items: center; }
+.retro-window { width: min(100%, 790px); position: relative; z-index: 1; background: white; border: 3px solid var(--deep); box-shadow: 8px 8px 0 #e9a9c7; }
+.window-bar { min-height: 36px; padding: 7px 12px; display: flex; align-items: center; justify-content: space-between; color: white; background: linear-gradient(90deg, #ed75aa, #b69bdf); }
+.window-title { font: 20px "VT323", monospace; }
+.window-controls { display: flex; gap: 5px; }
+.window-controls i { width: 20px; height: 18px; text-align: center; line-height: 18px; color: #a93672; background: #fff1f8; border: 1px solid #a93672; font: normal 12px Arial; }
+.hero-content { padding: 38px 20px; text-align: center; background: repeating-linear-gradient(45deg, #fffafd, #fffafd 10px, #fff5f9 10px, #fff5f9 20px); }
+.tiny-label, .established, .disclaimer, .section-heading span, .section-heading p, .question-number, .certificate-small, .certificate-footer { font-family: "Press Start 2P", monospace; }
+.tiny-label { margin-bottom: 30px; color: var(--deep); font-size: 9px; }
+.hero-pretitle { font: 25px "VT323", monospace; letter-spacing: 4px; }
+.hero h1 { margin: 12px 0; color: var(--deep); font: clamp(32px, 7vw, 62px)/1.5 "Press Start 2P", monospace; text-shadow: 4px 4px #ffc0da; }
+.hero h1 span { color: #9d78bd; }
+.hero h1 b { margin-left: 9px; color: #ed70a8; font-size: .6em; vertical-align: top; }
+.established { color: #95628b; font-size: 8px; letter-spacing: 2px; }
+.hero-image { width: 150px; height: 130px; position: relative; display: grid; place-items: center; margin: 25px auto; color: #bc5489; background: #ffe2ef; border: 3px dashed #e88cb6; border-radius: 28px; }
+.orbit-heart, .orbit-star { position: absolute; font-size: 24px; animation: floaty 2s infinite; }
+.orbit-heart { top: -12px; right: -13px; }
+.orbit-star { bottom: 0; left: -12px; }
+.hero-content h2 { color: #b72f70; font: 11px/2 "Press Start 2P", monospace; }
+.hero-description { color: #805477; font: 25px "VT323", monospace; }
+.pixel-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 18px; color: white; background: linear-gradient(#ffb2d2, #ed65a3); border: 2px solid #a92c6a; box-shadow: 4px 4px 0 #a92c6a; font: 9px "Press Start 2P", monospace; transition: transform .18s, box-shadow .18s; }
+.pixel-button:hover { transform: translate(3px, 3px); box-shadow: 1px 1px 0 #a92c6a; }
+.disclaimer { margin-top: 28px; color: #a05a81; font-size: 7px; line-height: 2; }
+.scroll-hint { margin-top: 38px; color: #bd5487; text-decoration: none; font: 23px "VT323", monospace; animation: floaty 2s infinite; }
+
+.navigation { position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 19px; background: #f7c7dd; border-block: 2px dashed #c65d91; }
+.navigation a { padding: 10px 13px; color: #a8326d; background: #fff7fb; border: 2px solid #d66c9c; box-shadow: 3px 3px #c86b98; text-decoration: none; font: 8px "Press Start 2P", monospace; }
+.navigation a:hover { color: white; background: #ed8db7; }
+
+.section { width: min(calc(100% - 40px), 850px); margin: 85px auto; scroll-margin-top: 28px; position: relative; z-index: 1; }
+.section-heading { margin-bottom: 32px; text-align: center; }
+.section-heading span { color: #c15c8e; font-size: 8px; line-height: 2.2; }
+.section-heading h2 { color: #b72f70; font: clamp(16px, 4vw, 25px)/1.8 "Press Start 2P", monospace; }
+.section-heading p { color: #a66a8b; font-size: 7px; line-height: 2.2; }
+
+.profile-content { display: flex; align-items: center; gap: 28px; padding: 28px; background: #fff9fc; }
+.profile-avatar { width: 125px; min-width: 125px; height: 125px; display: grid; place-items: center; color: #bd5c91; background: #ffe3ef; border: 3px dashed #db7eaa; }
+.profile-details { flex: 1; }
+.profile-name { margin-bottom: 16px; color: #c23e7c; font: 10px/1.8 "Press Start 2P", monospace; }
+.profile-details p { margin: 8px 0; font: 21px "VT323", monospace; }
+.profile-footer { padding: 12px; color: #9d3470; background: #f5c6dc; text-align: center; font: 8px/2 "Press Start 2P", monospace; }
+
+.stats-grid, .awards-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.stat-card { padding: 19px; text-align: center; background: white; border: 2px solid #e78db6; box-shadow: 4px 4px #edb4ce; }
+.stat-emoji { font-size: 30px; }
+.stat-label { margin: 14px 0; color: #b45486; font: 8px/1.8 "Press Start 2P", monospace; }
+.stat-value { color: #d13c81; font: 28px "VT323", monospace; }
+.stat-bar { height: 9px; margin-top: 14px; overflow: hidden; background: #fbe0ed; border: 1px solid #e7a0c1; }
+.stat-fill { width: 100%; height: 100%; background: repeating-linear-gradient(90deg, #ed76ab 0 8px, #f6a8cb 8px 12px); animation: fillbar 1.5s ease-out; }
+@keyframes fillbar { from { width: 0; } to { width: 100%; } }
+.secondary-button { display: flex; margin: 28px auto 0; }
+.tiny-note { color: #b34a7e; text-align: center; font: 19px "VT323", monospace; }
+
+.quiz-content { padding: 28px; background: #fffafd; }
+.question-number { color: #bf578a; font-size: 8px; }
+.quiz-content h3 { margin: 24px 0; color: #b53170; font: 11px/2 "Press Start 2P", monospace; }
+.quiz-option { display: block; width: 100%; margin: 10px 0; padding: 13px; color: #79465f; background: #fff0f6; border: 2px solid #e9a0c1; text-align: left; font-weight: 800; }
+.quiz-option:hover, .quiz-option.selected { background: #f8c5dc; border-color: #c54a83; }
+.quiz-result { margin-top: 18px; padding: 14px; color: #ad3370; background: #ffe1ee; text-align: center; font: 9px/2 "Press Start 2P", monospace; }
+
+.award-card { padding: 24px 12px; text-align: center; background: linear-gradient(145deg, white, #ffe8f2); border: 2px solid #e28db4; box-shadow: 4px 4px #e8b0cb; }
+.award-card > div { font-size: 44px; }
+.award-card h3 { color: #bd3e7c; font: 9px/2 "Press Start 2P", monospace; }
+.award-card p { color: #8b5772; font: 21px "VT323", monospace; }
+
+.certificate { padding: 12px; background: linear-gradient(135deg, #edb5cf, #f8d8e7); box-shadow: 8px 8px #d99bb8; }
+.certificate-border { padding: 28px; background: #fff9fc; border: 4px double #bb5685; text-align: center; }
+.certificate-stars { margin-bottom: 18px; color: #d35c94; font-size: 30px; }
+.certificate-small { color: #a7648b; font-size: 7px; line-height: 2; }
+.certificate h2 { margin-top: 24px; color: #b83e79; font: 19px "Press Start 2P", monospace; }
+.certificate h1 { color: #d15b93; font: clamp(18px, 5vw, 31px)/1.6 "Press Start 2P", monospace; }
+.certificate-heart { margin: 13px; color: #e76ca4; }
+.certificate-border p { color: #80516c; font: 24px/1.3 "VT323", monospace; }
+.winner-name { margin: 14px 0; color: #d13c81; font: 27px "Press Start 2P", monospace; }
+.certificate-stamp { display: inline-flex; align-items: center; gap: 9px; margin: 16px; padding: 12px; color: #b33271; border: 3px dashed #c54b83; font: 8px "Press Start 2P", monospace; }
+.signature { display: flex; justify-content: space-between; gap: 12px; margin-top: 30px; padding-top: 13px; color: #ac3976; border-top: 1px dashed #d78caf; font: 21px "VT323", monospace; }
+.certificate-footer { margin-top: 22px; color: #b16b8e; font-size: 6px; line-height: 2; }
+.certificate-button { display: flex; margin: 28px auto; }
+.certificate-success { color: #bd3f7b; text-align: center; font-weight: 900; }
+.final-message { margin-top: 45px; color: #bc4d83; text-align: center; font: 10px "Press Start 2P", monospace; }
+footer { padding: 24px 12px; color: white; background: #d85b95; text-align: center; font: 7px/2.7 "Press Start 2P", monospace; }
+
+.popup-overlay { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: #32142a99; }
+.popup-window { width: min(100%, 390px); background: white; border: 3px solid #b53673; box-shadow: 7px 7px #d77ca7; }
+.popup-content { padding: 28px 20px; background: #fff5fa; text-align: center; }
+.popup-icon { color: #d14b83; }
+.popup-content h3 { margin: 12px 0; color: #bd3376; font: 12px/2 "Press Start 2P", monospace; }
+.popup-content p { margin-bottom: 20px; color: #804565; font: 25px "VT323", monospace; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 600px) {
+  .top-bar { padding: 0 14px; }
+  .logo { font-size: 8px; }
+  .system-status { font-size: 16px; }
+  .hero { min-height: auto; padding: 38px 14px 25px; }
+  .hero-content { padding: 30px 12px; }
+  .hero-content h2 { font-size: 9px; }
+  .section { width: calc(100% - 30px); margin: 62px auto; }
+  .profile-content { flex-direction: column; align-items: stretch; padding: 19px 13px; }
+  .profile-avatar { margin: auto; }
+  .profile-details p { font-size: 19px; }
+  .stats-grid, .awards-grid { grid-template-columns: 1fr; }
+  .quiz-content { padding: 20px 13px; }
+  .quiz-content h3 { font-size: 9px; }
+  .navigation { gap: 8px; padding: 14px 8px; }
+  .navigation a { padding: 9px; font-size: 7px; }
+  .certificate-border { padding: 20px 10px; }
+  .certificate-small { font-size: 6px; }
+  .winner-name { font-size: 20px; }
+  .certificate-border p { font-size: 20px; }
+  .certificate-stamp { font-size: 7px; }
+  .signature { font-size: 18px; }
+  .final-message { font-size: 8px; line-height: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+/* MULTI-QUESTION INTERROGATION */
+.quiz-topline { display:flex; justify-content:space-between; gap:12px; }
+.quiz-progress { height:10px; margin:14px 0 24px; overflow:hidden; border:1px solid #e7a0c1; background:#fbe0ed; }
+.quiz-progress > div { height:100%; background:repeating-linear-gradient(90deg,#ed76ab 0 9px,#f6a8cb 9px 13px); transition:width .25s ease; }
+.quiz-question { font:700 15px/1.7 "Nunito",sans-serif !important; color:#a82f6b; }
+.quiz-options { display:grid; gap:11px; }
+.quiz-option { display:flex; align-items:center; gap:12px; min-height:60px; line-height:1.55; border-radius:3px; }
+.quiz-option > span:nth-child(2) { flex:1; }
+.option-letter { display:grid; flex:0 0 28px; width:28px; height:28px; place-items:center; border:1px solid #d77ba6; border-radius:50%; color:#ad3973; background:#fff8fb; font:9px "Press Start 2P",monospace; }
+.quiz-option.selected { color:#8d2459; background:#f7c1da; border-color:#b93273; box-shadow:3px 3px #e4a1bf; }
+.quiz-option.selected .option-letter { color:white; background:#c94b87; }
+.quiz-navigation { display:flex; justify-content:space-between; gap:12px; margin-top:24px; }
+.quiz-nav-button { display:inline-flex; align-items:center; gap:5px; padding:10px 12px; color:#a8326d; background:#fff7fb; border:2px solid #d66c9c; font:8px "Press Start 2P",monospace; }
+.quiz-nav-button.next { color:white; background:#e96ca5; }
+.quiz-nav-button:disabled { cursor:not-allowed; opacity:.4; }
+.quiz-hint { margin-top:14px; color:#b24b80; text-align:center; font:19px "VT323",monospace; }
+.quiz-finished { padding:15px 5px; text-align:center; }
+.finished-heart { font-size:54px; }
+.quiz-finished h3 { margin:15px 0; color:#b53170; font:12px/2 "Press Start 2P",monospace; }
+.quiz-finished p { margin:12px 0; color:#80516c; font:22px/1.4 "VT323",monospace; }
+.quiz-finished .quiz-verdict { padding:14px; color:#a42c68; background:#ffe1ee; font:9px/2 "Press Start 2P",monospace; }
+@media (max-width:600px) {
+  .quiz-topline { flex-direction:column; }
+  .quiz-question { font-size:14px !important; }
+  .quiz-option { font-size:12px; padding:11px 9px; }
+  .quiz-nav-button { font-size:7px; padding:9px 7px; }
+}
